@@ -131,6 +131,7 @@ p {
 
 header {
     background-color: var(--header-background);
+    margin: 0 0 72px;
 }
 
 header::before {
@@ -143,7 +144,10 @@ header::before {
 }
 
 .header__wrapper,
-.news__wrapper {
+.news__wrapper,
+.projects__wrapper,
+.animals__wrapper,
+.help__wrapper {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 5px;
@@ -223,7 +227,7 @@ header::before {
     display: block;
 }
 
-.header__help {
+.help__button {
     color: var(--background-color);
     background-color: var(--header-help-color);
     border-radius: 25px;
@@ -236,11 +240,220 @@ header::before {
     display: block;
 }
 
+.news__wrapper,
+.projects__card-wrap,
+.animals__status,
+.animals__list-card {
+    display: flex;
+}
 
+.card {
+    display: block;
+    margin: 0 48px 70px 0;
+}
 
-.card__title {
+.card__wrapper {
+    background-color: var(--header-background);
+    min-width: 570px;
+    min-height: 473px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 45px;
+    position: relative;
+}
+
+.picture__wrapper {
+    background-color: var(--header-background);
+    max-width: 100%;
+    max-height: 318px;
+    margin: 0 0 24px;
+    overflow: hidden;
+    border-radius: 45px;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.card__picture {
+    min-width: 100%;
+}
+
+.card__headline,
+.card__title,
+.card__text {
+    margin: 0 24px 24px 28px;
     font-family: "Soyuz Grotesk Bold", sans-serif;
     font-weight: 700;
     font-size: 3.2rem;
     line-height: normal;
+}
+
+.card__headline::after,
+.card__title::after {
+    display: block;
+    content: '';
+    background-color: var(--green-point);
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    position: absolute;
+}
+
+.card__headline::after {
+    top: 342px;
+    left: 522px;
+}
+
+.card__title::after {
+    top: 342px;
+    left: 325px;
+}
+
+.card__paragraf {
+    margin: 0 24px 56px 28px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.95rem;
+}
+
+.news__item {
+    background-color: var(--header-background);
+    margin: 0 0 24px;
+    border-radius: 45px;
+}
+
+.news__link {
+    min-width: 579px;
+    min-height: 99px;
+    font-family: "Soyuz Grotesk Bold", sans-serif;
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+}
+
+.news__picture {
+    max-height: 99px;
+    max-width: 100%;
+    margin: 0 35px 0 0;
+    border-radius: 45px;
+}
+
+.headline {
+    font-family: "Soyuz Grotesk Bold", sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: normal;
+    margin: 0 0 72px;
+}
+
+.projects__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.animals__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.animals__status-item {
+    background-color: var(--header-background);
+    margin: 0 30px 24px 0;
+    padding: 10px 19px 10px 24px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    border-radius: 36px;
+}
+
+.animals__status-item:first-child::after,
+.animals__status-item:nth-child(2)::after,
+.animals__status-item:last-child::after {
+    content: '';
+    background-color: var(--green-point);
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    margin: 0 0 0 22px;
+}
+
+.animals__status-item:nth-child(2)::after {
+    background-color: var(--yellow-point);
+}
+
+.animals__status-item:last-child::after {
+    background-color: var(--red-point);
+}
+
+.animals__card {
+    background-color: var(--header-background);
+    display: flex;
+    flex-direction: column;
+    margin: 0 40px 144px 0;
+    border-radius: 45px;
+    position: relative;
+}
+
+.help__wrapper {
+    display: flex;
+}
+
+.support,
+.things {
+    background-color: var(--header-background);
+    display: flex;
+    flex-direction: column;
+    margin: 0 93px 200px 0;
+    border-radius: 45px;
+}
+
+.support {
+    min-width: 536px;
+    position: relative;
+}
+
+.things {
+    min-width: 569px;
+}
+
+.support__headline,
+.things__headline {
+    margin: 47px auto 24px 24px;
+}
+
+.support__form {
+    min-width: 100%;
+}
+
+.support__input {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0 0 24px 19px;
+    padding: 13px 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.95rem;
+    min-width: 473px;
+    border-width: 0;
+    border-radius: 45px;
+}
+
+.support__button {
+    border: 0;
+    margin: 0 auto 40px 19px;
+}
+
+.support__link {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.95rem;
+    position: absolute;
+    top: 315px;
+    left: 336px;
 }
